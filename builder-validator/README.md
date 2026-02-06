@@ -1,6 +1,6 @@
 # builder-validator
 
-- File ownership is the load-bearing wall. Builder owns implementation files, Validator owns test files. No overlap. This is what prevents the exact conflict problem we discussed with Ralph.
+- File ownership is the load-bearing wall. Builder owns implementation files, Validator owns test files.
 - The Validator doesn't wait. The whole point is real-time feedback. The message format with severity levels (CRITICAL/WARN/NOTE) gives the Builder a clear signal on what to drop everything for vs. what to note for later.
 - Dispute resolution has a hard cap. Two exchanges, then escalate to the Lead who spawns a tiebreaker subagent. Without this, two agents can ping-pong forever and burn tokens arguing.
 - The Lead does nothing but coordinate. It doesn't implement, doesn't review. It spawns, creates the task list, breaks ties, and synthesizes at the end. Keeps the roles clean.
